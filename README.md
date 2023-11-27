@@ -2,6 +2,9 @@
 
 Here you can find a list of the top rated Animes of all time.
 
+![Screenshot 2023-11-27 at 20 52 44](https://github.com/Gigioxx/anime-base-next/assets/75276669/4186399c-15db-456e-9e9e-66e3a014fb4e)
+
+
 ## How to use
 
 First, you need to clone the repository:
