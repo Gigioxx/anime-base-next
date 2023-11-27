@@ -1,5 +1,7 @@
 import Image from 'next/image';
 
+import { MotionDiv } from './MotionDiv';
+
 export interface AnimeProp {
   id: string;
   name: string;
@@ -17,9 +19,21 @@ interface Prop {
   index: number;
 }
 
-function AnimeCard({ anime }: Prop) {
+const variants = {
+  hidden: { opacity: 0 },
+  visible: { opacity: 1 },
+};
+
+function AnimeCard({ anime, index }: Prop) {
   return (
-    <div className='relative w-full max-w-sm rounded'>
+    <MotionDiv
+      animate='visible'
+      className='relative w-full max-w-sm rounded'
+      initial='hidden'
+      transition={{ delay: index * 0.25, ease: 'easeInOut', duration: 0.5 }}
+      variants={variants}
+      viewport={{ amount: 0 }}
+    >
       <div className='relative h-[37vh] w-full'>
         <Image
           fill
@@ -54,7 +68,7 @@ function AnimeCard({ anime }: Prop) {
           </div>
         </div>
       </div>
-    </div>
+    </MotionDiv>
   );
 }
 
