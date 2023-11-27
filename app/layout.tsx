@@ -1,13 +1,11 @@
 import type { Metadata } from 'next';
 
-import { DM_Sans } from 'next/font/google';
+import { GeistSans } from 'geist/font/sans';
 
 import Hero from '@/components/Hero';
 import Footer from '@/components/Footer';
 
 import './globals.css';
-
-const dmSans = DM_Sans({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title: 'Anime Base',
@@ -17,7 +15,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang='en'>
-      <body className={dmSans.className}>
+      <body className={GeistSans.className}>
         <main className='mx-auto max-w-7xl bg-[#0F1117]'>
           <Hero />
           {children}
